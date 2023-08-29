@@ -1,7 +1,5 @@
 ﻿using EventBus.Base;
-using EventBus.Base.Abstraction;
 using EventBus.Base.Events;
-using Microsoft.Azure.Amqp.Framing;
 using Microsoft.Azure.ServiceBus;
 using Microsoft.Azure.ServiceBus.Management;
 using Microsoft.Extensions.Logging;
@@ -16,7 +14,7 @@ namespace EventBus.AzureServiceBus
         private ManagementClient _managementClient;
         private ILogger _logger;
             
-        public EventBusServiceBus(IServiceProvider serviceProvider, IEventBusSubscriptionManager subscriptionManager, EventBusConfiguration eventBusConfig) : base(serviceProvider, subscriptionManager, eventBusConfig)
+        public EventBusServiceBus(IServiceProvider serviceProvider, EventBusConfiguration eventBusConfig) : base(serviceProvider,  eventBusConfig)
         {
             _logger = serviceProvider.GetService(typeof(ILogger<EventBusServiceBus>)) as ILogger<EventBusServiceBus>;
             _topicClient = CreateTopicClient();
