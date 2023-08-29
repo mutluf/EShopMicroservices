@@ -10,33 +10,36 @@ namespace EventBus.Base.Events
         public readonly IServiceProvider _serviceProvider;
         public readonly IEventBusSubscriptionManager _subscriptionManager;
 
-        private EventBusConfiguration? _eventBusConfig;
+        public EventBusConfiguration? EventBusConfig { get; set; }
 
         protected BaseEventBus(IServiceProvider serviceProvider, IEventBusSubscriptionManager subscriptionManager, EventBusConfiguration eventBusConfig)
         {
             _serviceProvider = serviceProvider;
             _subscriptionManager = new InMemoryEventBusSubscriptionManager(ProcessEventName);
-            _eventBusConfig = eventBusConfig;
+            EventBusConfig = eventBusConfig;
         }
 
         public virtual string ProcessEventName( string eventName)
         {
-            if (_eventBusConfig.DeleteEventPrefix)
-                eventName = eventName.TrimStart(_eventBusConfig.EventNamePrefix.ToArray());
+            if (EventBusConfig.DeleteEventPrefix)
+                eventName = eventName.TrimStart(EventBusConfig.EventNamePrefix.ToArray());
 
-            if(_eventBusConfig.DeleteEventSuffix)
-                eventName = eventName.TrimEnd(_eventBusConfig.EventNameSuffix.ToArray());
+            if(EventBusConfig.DeleteEventSuffix)
+                eventName = eventName.TrimEnd(EventBusConfig.EventNameSuffix.ToArray());
 
             return eventName;
         }
 
         public virtual string GetSubName(string eventName)
         {
-            return $"{_eventBusConfig.SubscriberClientAppName}.{ProcessEventName(eventName)}";
+            return $"{EventBusConfig.SubscriberClientAppName}.{ProcessEventName(eventName)}";
         }
 
-        public virtual void Dispose() => _eventBusConfig = null;
-
+        public virtual void Dispose()
+        {
+            EventBusConfig = null;
+            _subscriptionManager.Clear();
+        }
 
         public async Task<bool> ProcessEvent(string eventName, string message)
         {
@@ -54,7 +57,7 @@ namespace EventBus.Base.Events
                         var handler = _serviceProvider.GetService(subscription.HandlerType);
                         if(handler == null) continue;
 
-                        var eventType = _subscriptionManager.GetEventTypeByName($"{_eventBusConfig.EventNamePrefix}{eventName}{_eventBusConfig.EventNameSuffix}");
+                        var eventType = _subscriptionManager.GetEventTypeByName($"{EventBusConfig.EventNamePrefix}{eventName}{EventBusConfig.EventNameSuffix}");
                         var integrationEvent = JsonConvert.DeserializeObject(message, eventType);
 
                         var concreteType = typeof(IIntegrationEventHandler<>).MakeGenericType(eventType);
