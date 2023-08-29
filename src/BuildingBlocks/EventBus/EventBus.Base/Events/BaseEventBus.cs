@@ -12,7 +12,7 @@ namespace EventBus.Base.Events
 
         public EventBusConfiguration? EventBusConfig { get; set; }
 
-        protected BaseEventBus(IServiceProvider serviceProvider, IEventBusSubscriptionManager subscriptionManager, EventBusConfiguration eventBusConfig)
+        protected BaseEventBus(IServiceProvider serviceProvider, EventBusConfiguration eventBusConfig)
         {
             _serviceProvider = serviceProvider;
             _subscriptionManager = new InMemoryEventBusSubscriptionManager(ProcessEventName);
