@@ -7,7 +7,7 @@ namespace EventBus.RabbitMQ
 {
     public class RabbitMQPersistenceConnection: IDisposable
     {
-        private IConnection? connection;
+        private IConnection connection;
         private readonly IConnectionFactory connectionFactory;
         private readonly int retryCount;
         private object lock_object = new object();
@@ -28,7 +28,7 @@ namespace EventBus.RabbitMQ
 
         public void Dispose()
         {
-            connection?.Dispose();
+            connection.Dispose();
             disposed = true;
         }
 
@@ -45,7 +45,7 @@ namespace EventBus.RabbitMQ
 
                 policy.Execute(() =>
                 {
-                    connection = connectionFactory.CreateConnection();
+                    connection = connectionFactory.CreateConnection();//hata
                 });
 
                 if (IsConnected)
