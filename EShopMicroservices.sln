@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
@@ -192,3 +193,5 @@ Global
 		SolutionGuid = {F359954A-E39B-4261-A368-6AC09B4C16E2}
 	EndGlobalSection
 EndGlobal
+=======
+>>>>>>> 96ff72b27fa6abb4a62d0018ec595eea5461d513
