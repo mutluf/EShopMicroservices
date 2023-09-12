@@ -32,7 +32,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventBus.AzureServiceBus", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BlazorWebApp", "BlazorWebApp", "{37C9E3C3-DECB-458F-A7B1-31D39058E5B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventBus.RabbitMQ", "src\BuildingBlocks\EventBus\EventBus.RabbitMQ\EventBus.RabbitMQ.csproj", "{F6F3C598-23E1-48F6-BF77-D5EEE02F8C8E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventBus.RabbitMQ", "src\BuildingBlocks\EventBus\EventBus.RabbitMQ\EventBus.RabbitMQ.csproj", "{F6F3C598-23E1-48F6-BF77-D5EEE02F8C8E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BasketService", "BasketService", "{069F5ACE-4B95-482B-9C85-D52C65D3B752}"
 EndProject
@@ -42,15 +42,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IdentityService", "Identity
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NotificationService", "NotificationService", "{47950242-34AB-4EDA-BC77-25E25F3BAE1B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasketService.Api", "src\Services\BasketService\BasketService.Api\BasketService.Api.csproj", "{EEB838B2-BCCA-4BEB-8DEA-2690CB32CE60}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BasketService.Api", "src\Services\BasketService\BasketService.Api\BasketService.Api.csproj", "{EEB838B2-BCCA-4BEB-8DEA-2690CB32CE60}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp", "src\Clients\BlazorWebApp\WebApp\WebApp.csproj", "{15131302-47EA-4D4D-9BFC-174A68EEF16F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp", "src\Clients\BlazorWebApp\WebApp\WebApp.csproj", "{15131302-47EA-4D4D-9BFC-174A68EEF16F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatalogService.Api", "src\Services\CatalogService\CatalogService.Api\CatalogService.Api.csproj", "{F4FDF8F0-3541-418E-B848-91B65A0C8931}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CatalogService.Api", "src\Services\CatalogService\CatalogService.Api\CatalogService.Api.csproj", "{F4FDF8F0-3541-418E-B848-91B65A0C8931}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityService.Api", "src\Services\IdentityService\IdentityService.Api\IdentityService.Api.csproj", "{74A0EA0F-3546-4496-B63E-1AF99D19AEF2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityService.Api", "src\Services\IdentityService\IdentityService.Api\IdentityService.Api.csproj", "{74A0EA0F-3546-4496-B63E-1AF99D19AEF2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotificationService", "src\Services\NotificationService\NotificationService\NotificationService.csproj", "{A5604A26-4446-4E1E-A851-E43EC08B699D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NotificationService", "src\Services\NotificationService\NotificationService\NotificationService.csproj", "{A5604A26-4446-4E1E-A851-E43EC08B699D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OrderService", "OrderService", "{192EB30E-961D-422F-A662-9F09759198BE}"
 EndProject
@@ -60,21 +60,18 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{E75A4CC8-D1AC-4F3A-9B62-FB7FC3B6A6A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderService.Domain", "src\Services\OrderService\Core\OrderService.Domain\OrderService.Domain.csproj", "{E48266C6-BB73-4EB0-BDE1-E18304C28665}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderService.Domain", "src\Services\OrderService\Core\OrderService.Domain\OrderService.Domain.csproj", "{E48266C6-BB73-4EB0-BDE1-E18304C28665}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderService.Application", "src\Services\OrderService\Core\OrderService.Application\OrderService.Application.csproj", "{9672CB92-5BA0-46C6-A78B-BE053F914C32}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderService.Application", "src\Services\OrderService\Core\OrderService.Application\OrderService.Application.csproj", "{9672CB92-5BA0-46C6-A78B-BE053F914C32}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderService.Infrastructure", "src\Services\OrderService\Infrastructure\OrderService.Infrastructure\OrderService.Infrastructure.csproj", "{6E298B26-8523-43B7-82FA-AF38B4B82D17}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderService.Infrastructure", "src\Services\OrderService\Infrastructure\OrderService.Infrastructure\OrderService.Infrastructure.csproj", "{6E298B26-8523-43B7-82FA-AF38B4B82D17}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderService.Persistence", "src\Services\OrderService\Infrastructure\OrderService.Persistence\OrderService.Persistence.csproj", "{7833E878-F63A-45FA-B54E-85109015D1B7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderService.Persistence", "src\Services\OrderService\Infrastructure\OrderService.Persistence\OrderService.Persistence.csproj", "{7833E878-F63A-45FA-B54E-85109015D1B7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderService.Api", "src\Services\OrderService\Presentation\OrderService.Api\OrderService.Api.csproj", "{734B6121-0C44-441A-B1FE-D9358FB00E2F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderService.Api", "src\Services\OrderService\Presentation\OrderService.Api\OrderService.Api.csproj", "{734B6121-0C44-441A-B1FE-D9358FB00E2F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PaymentService", "PaymentService", "{1C403A5B-AFF3-4F8A-95BB-521D607C080F}"
 EndProject
-<<<<<<< Updated upstream
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaymentService.Api", "src\Services\PaymentService\PaymentService.Api\PaymentService.Api.csproj", "{EEA0F904-2E07-4F4E-99A4-52436CE50CC9}"
-=======
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaymentService.Api", "src\Services\PaymentService\PaymentService.Api\PaymentService.Api.csproj", "{EEA0F904-2E07-4F4E-99A4-52436CE50CC9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{092323F8-53F7-428A-BFC9-15B1DE153566}"
@@ -82,7 +79,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildingBlocks", "BuildingBlocks", "{AEB704E5-85D5-4916-969C-D260A78814D9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventBus.UnitTest", "tests\BuildingBlocks\EventBus.UnitTest\EventBus.UnitTest.csproj", "{476FB44A-4380-4D37-A13D-735B3D41A709}"
->>>>>>> Stashed changes
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
